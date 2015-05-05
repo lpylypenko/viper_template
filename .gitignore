@@ -36,4 +36,4 @@ Carthage/Build
 .DS_Store
 
 # Viper templates
-Templates/Modules/
+Modules/
