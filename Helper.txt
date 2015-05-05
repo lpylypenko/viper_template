@@ -1,3 +1,6 @@
+URL:
+https://github.com/teambox/viper-module-generator
+
 Generate command:
 vipergen generate ModuleName --path=Modules --language swift --template=MyTemplate
 
