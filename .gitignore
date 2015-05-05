@@ -31,3 +31,9 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+# Finder
+.DS_Store
+
+# Viper templates
+Templates/Modules/
