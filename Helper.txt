@@ -1,0 +1,5 @@
+Generate command:
+vipergen generate ModuleName --path=Modules --language swift --template=MyTemplate
+
+Path:
+/Library/Ruby/Gems/
