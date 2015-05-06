@@ -1,14 +1,13 @@
 
 import Foundation
 
-let VIPERViewControllerIdentifier = "VIPERViewController"
-
 class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
+  static let viewControllerIdentifier = "VIPERViewController"
   weak var viewController: VIPERViewController?
   var router : Router?
   
   class func setupModule() -> VIPERWireFrameProtocol {
-    let viewController = viewControllerFromStoryboard()
+    let viewController = viewControllerFromStoryboard(viewControllerIdentifier) as! VIPERViewController
     let view: VIPERViewProtocol = viewController as VIPERViewProtocol
     let presenter: protocol<VIPERPresenterProtocol, VIPERInteractorOutputProtocol> = VIPERPresenter()
     let interactor: VIPERInteractorInputProtocol = VIPERInteractor()
@@ -27,11 +26,5 @@ class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
     wireFrame.router = Router.sharedInstance
     
     return wireFrame
-  }
-  
-  class func viewControllerFromStoryboard() -> VIPERViewController {
-    let storyboard = defaultStoryboard()
-    let viewController = storyboard.instantiateViewControllerWithIdentifier(VIPERViewControllerIdentifier) as! VIPERViewController
-    return viewController
   }
 }
