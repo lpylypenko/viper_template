@@ -4,7 +4,7 @@ import Foundation
 class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
   static let viewControllerIdentifier = "VIPERViewController"
   
-  class func setupModule() -> VIPERWireFrameProtocol {
+  class func setupModule() -> UIViewController {
     let viewController = viewControllerFromStoryboard(viewControllerIdentifier) as! VIPERViewController
     let view: VIPERViewProtocol = viewController as VIPERViewProtocol
     let presenter: protocol<VIPERPresenterProtocol, VIPERInteractorOutputProtocol> = VIPERPresenter()
@@ -12,7 +12,8 @@ class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
     let APIDataManager: VIPERAPIDataManagerInputProtocol = VIPERAPIDataManager()
     let localDataManager: VIPERLocalDataManagerInputProtocol = VIPERLocalDataManager()
     let wireFrame = VIPERWireframe()
-
+    let router = Router.sharedInstance
+    
     view.presenter = presenter
     presenter.view = view
     presenter.wireFrame = wireFrame
@@ -21,8 +22,8 @@ class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
     interactor.APIDataManager = APIDataManager
     interactor.localDatamanager = localDataManager
     wireFrame.viewController = viewController
-    wireFrame.router = Router.sharedInstance
+    wireFrame.router = router
     
-    return wireFrame
+    return viewController
   }
 }
