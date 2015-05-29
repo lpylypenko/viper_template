@@ -7,10 +7,6 @@ protocol VIPERViewProtocol: class {
 }
 
 protocol VIPERWireFrameProtocol: class {
-  var viewController: VIPERViewController? { get set }
-  var router: Router? { get set }
-  static func setupModule() -> VIPERWireFrameProtocol
-  
   // PRESENTER -> WIREFRAME
 }
 

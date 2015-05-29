@@ -3,8 +3,6 @@ import Foundation
 
 class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
   static let viewControllerIdentifier = "VIPERViewController"
-  weak var viewController: VIPERViewController?
-  var router : Router?
   
   class func setupModule() -> VIPERWireFrameProtocol {
     let viewController = viewControllerFromStoryboard(viewControllerIdentifier) as! VIPERViewController
@@ -13,7 +11,7 @@ class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
     let interactor: VIPERInteractorInputProtocol = VIPERInteractor()
     let APIDataManager: VIPERAPIDataManagerInputProtocol = VIPERAPIDataManager()
     let localDataManager: VIPERLocalDataManagerInputProtocol = VIPERLocalDataManager()
-    let wireFrame: VIPERWireFrameProtocol = VIPERWireframe()
+    let wireFrame = VIPERWireframe()
 
     view.presenter = presenter
     presenter.view = view
