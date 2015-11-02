@@ -8,7 +8,7 @@ class VIPERPresenter: VIPERPresenterProtocol, VIPERInteractorOutputProtocol {
   
   init() {}
   
-  // MARK: VIPERInteractorOutputProtocol
+  // MARK: - VIPERInteractorOutputProtocol
   
-  // MARK: VIPERPresenterProtocol
+  // MARK: - VIPERPresenterProtocol
 }

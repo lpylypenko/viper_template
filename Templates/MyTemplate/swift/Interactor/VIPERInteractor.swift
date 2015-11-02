@@ -8,5 +8,5 @@ class VIPERInteractor: VIPERInteractorInputProtocol {
   
   init() {}
   
-  // MARK: VIPERInteractorInputProtocol
+  // MARK: - VIPERInteractorInputProtocol
 }

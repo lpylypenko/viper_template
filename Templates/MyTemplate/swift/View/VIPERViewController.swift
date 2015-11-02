@@ -17,13 +17,13 @@ class VIPERViewController: BaseViewController, VIPERViewProtocol {
     super.viewWillDisappear(animated)
   }
   
-  // MARK: Subviews
+  // MARK: - Subviews
   
   override func setupSubviews() {
     super.setupSubviews()
   }
   
-  // MARK: VIPERViewProtocol
+  // MARK: - VIPERViewProtocol
   
-  // MARK: IBAction
+  // MARK: - IBActions
 }

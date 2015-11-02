@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 class VIPERWireframe : BaseWireframe, VIPERWireFrameProtocol {
   static let viewControllerIdentifier = "VIPERViewController"
