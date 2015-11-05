@@ -6,14 +6,14 @@ protocol VIPERViewProtocol: class {
   // PRESENTER -> VIEW
 }
 
-protocol VIPERWireFrameProtocol: class {
+protocol VIPERWireframeProtocol: class {
   // PRESENTER -> WIREFRAME
 }
 
 protocol VIPERPresenterProtocol: class {
   var view: VIPERViewProtocol? { get set }
   var interactor: VIPERInteractorInputProtocol? { get set }
-  var wireFrame: VIPERWireFrameProtocol? { get set }
+  var wireframe: VIPERWireframeProtocol? { get set }
   // VIEW -> PRESENTER
 }
 
